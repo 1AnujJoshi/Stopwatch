@@ -31,10 +31,17 @@ btnStop.onclick = function(){
     clearInterval(Interval);
 }
 
-//reset button - interval is cleared and window is reloaded to bring everything to initial state
+//reset button - interval is cleared and all the variables are initialised to 0 and inner text is changed t0 00 as well
 btnReset.onclick = function(){
     clearInterval(Interval);
-    location.reload();   
+    hours = 0;
+    mins = 0;
+    secs = 0 ;
+    milli = 0;
+    Hours.innerHTML = "00";
+    Mins.innerHTML = "00";
+    Secs.innerHTML = "00" ;
+    Milli.innerHTML = "00";  
 }
 
 //Timer function which controls the seconds, minutes and hours to be displayed in stopwatch
