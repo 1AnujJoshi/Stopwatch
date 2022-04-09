@@ -1,35 +1,44 @@
 window.onload = function () {
 
+// variables initialised with zero at starting
 var hours = 00;
 var mins = 00;
 var secs = 00;
 var milli = 00;
 
+//getting all the elements whose innerhtml needs to be changed while running stopwatch
 var Hours = document.getElementById('hours');
 var Mins = document.getElementById('mins');
 var Secs = document.getElementById('secs');
 var Milli = document.getElementById('milli');
 
+// getting all the button by their id's 
 var btnStart = document.getElementById('btn-start');
 var btnStop = document.getElementById('btn-stop');
 var btnReset = document.getElementById('btn-reset');
+
+//variable for setting an interval
 var Interval;
 
+// start button -interval is cleared- interval is set and stopwatch starts
 btnStart.onclick = function(){
     clearInterval(Interval);
-    Interval = setInterval(startTimer, 10);
+    Interval = setInterval(Timer, 10);
 }
 
+//stop button stops the stopwatch - value gets paused- interval is cleared
 btnStop.onclick = function(){
     clearInterval(Interval);
 }
 
+//reset button - interval is cleared and window is reloaded to bring everything to initial state
 btnReset.onclick = function(){
     clearInterval(Interval);
     location.reload();   
 }
 
-function startTimer () {
+//Timer function which controls the seconds, minutes and hours to be displayed in stopwatch
+function Timer () {
     milli++; 
     
     if(milli <= 9){
@@ -54,7 +63,7 @@ function startTimer () {
     if (secs > 9){
       Secs.innerHTML = secs;
     }
-
+    // if seconds becomes 60 then increase 1 minute and initialize seconds to 0
     if(secs > 59){
         mins++;
         Mins.innerHTML = "0" + mins;
@@ -69,7 +78,7 @@ function startTimer () {
     if( mins > 9){
         Mins.innerHTML = mins;
     }
-
+    // if minutes becomes equals to 60 initiaze it with 0 and increase hour by 1
     if(mins > 59){
         hours++;
         Hours.innerHTML = "0" + hours;
@@ -82,7 +91,5 @@ function startTimer () {
     }
   
   }
-
-
 
 }
