@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stopwatch Project</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://kit.fontawesome.com/a6ec278789.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!--  header for the title of stopwatch  -->
+    <header>
+             <h1>ST<i class="fa-solid fa-stopwatch"></i>PWATCH</h1>
+    </header>
+    <!-- div containing the display of stopwatch and all the buttons -->
+    <div id="stopwatch-container">
+         <div id="display-container">
+            <p>
+                <span id="hours">00</span> h <span id="mins">00</span> m <span id="secs">00</span> s <span id="milli">00</span>
+            </p>
+        </div>
+        
+        <div id="btn-container"> 
+                <button id="btn-reset">RESET</button>
+                <button id="btn-stop">STOP</button>
+                <button id="btn-start">START</button>
+        </div>
+
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
