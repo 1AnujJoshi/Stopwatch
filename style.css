@@ -10,6 +10,7 @@ body{
 /* styling header */
 header{
     color: #29fe00;
+    width: 100%;
     font-size: 2.5rem;
 }
 /* font size of the display */
@@ -61,3 +62,11 @@ button:hover{
     color: #29fe00;
     background-color: aliceblue;
 }
+
+
+/* media query for header */
+@media only screen and (max-width: 600px) {
+    header {
+      font-size: 20px;
+    }
+  }
