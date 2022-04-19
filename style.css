@@ -61,3 +61,10 @@ button:hover{
     color: #29fe00;
     background-color: aliceblue;
 }
+
+/* media query for header */
+@media only screen and (max-width: 600px) {
+    header {
+      font-size: 20px;
+    }
+  }
